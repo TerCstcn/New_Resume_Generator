@@ -1,0 +1,170 @@
+﻿@model Resume.Models.HomeModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="card">
+			<div class="card-header fw-bolder fs-5 text-center" style="letter-spacing:3px">RESUME MAKER FORM</div>
+			<div class="card-body">
+				<form method="post" asp-action="Insert">
+					<div><h5>Objectives</h5></div>
+					<div class="form-group">
+						<textarea class="form-control" id="objectives" rows="3" asp-for="Objectives"></textarea>
+					</div>
+					<hr />
+					@*========== START - Personal Details ==========*@
+					<div><h5>Personal Details</h5></div>
+					<div class="row">
+						<div class="form-group col-4">
+							<label for="firstname">First Name</label>
+							<input type="text" class="form-control" id="firstname" placeholder="Enter First Name" asp-for="FirstName">
+						</div>
+						<div class="form-group col-4">
+							<label for="firstname">Middle Name</label>
+							<input type="text" class="form-control" id="middlename" placeholder="Enter Middle Name" asp-for="MiddleName">
+						</div>
+						<div class="form-group col-4">
+							<label for="surname">Surname</label>
+							<input type="text" class="form-control" id="surname" placeholder="Enter Surname" asp-for="Surname">
+						</div>
+						<div class="form-group col-3">
+							<label for="placeofbirth">Place of Birth</label>
+							<input type="text" class="form-control" id="placeofbirth" placeholder="Enter Place of Birth" asp-for="PlaceBirth">
+						</div>
+						<div class="form-group col-2">
+							<label for="dateofbirth">Date of Birth</label>
+							<input type="date" class="form-control" id="dateofbirth" placeholder="Enter Date of Birth" asp-for="DateBirth">
+						</div>
+						<div class="form-group col-1">
+							<label for="gender">Gender</label>
+							<select class="form-control" id="gender" asp-for="Gender">
+								<option selected disabled>Select</option>
+								<option>Male</option>
+								<option>Female</option>
+							</select>
+						</div>
+						<div class="form-group col-6">
+							<label for="address">Address</label>
+							<textarea class="form-control" id="address" rows="1" asp-for="Address"></textarea>
+						</div>
+						<div class="form-group col-3">
+							<label for="contactnumber">Contact Number</label>
+							<input type="tel" class="form-control" id="contactnumber" placeholder="Enter Contact Number" asp-for="ContactNumber">
+						</div>
+						<div class="form-group col-3">
+							<label for="email">Email</label>
+							<input type="email" class="form-control" id="email" placeholder="Enter email" asp-for="Email">
+						</div>
+						<div class="form-group col-3">
+							<label for="linkedin">LinkedIn URL</label>
+							<input type="text" class="form-control" id="linkedin" placeholder="Enter LinkedIn URL" asp-for="LinkedIn">
+						</div>
+						<div class="form-group col-3">
+							<label for="website">Website</label>
+							<input type="text" class="form-control" id="website" placeholder="Enter website" asp-for="Website">
+						</div>
+					</div>
+					@*========== END - Personal Details ==========*@
+					<hr class="my-3" />
+					@*========== START - Education ==========*@
+					<div><h5>Education</h5></div>
+					<div class="row">
+						<div class="form-group col-6">
+							<label for="college">College</label>
+							<input type="text" class="form-control" id="college" placeholder="Enter College Name" asp-for="College">
+						</div>
+						<div class="form-group col-6">
+							<label for="college_address">Address</label>
+							<input type="text" class="form-control" id="college_address" placeholder="Enter College Address" asp-for="CollegeAdd">
+						</div>
+						<div class="form-group col-6">
+							<label for="college_course">Course</label>
+							<input type="text" class="form-control" id="college_course" placeholder="Enter Course" asp-for="CollegeCourse">
+						</div>
+						<div class="form-group col-6">
+							<label for="college_year">Year Graduated</label>
+							<select class="form-control" id="college_year" asp-for="CollegeGrad">
+								<option selected>Select Year...</option>
+								<option>2024</option>
+								<option>2023</option>
+								<option>2022</option>
+								<option>2021</option>
+								<option>2020</option>
+							</select>
+						</div>
+						<div class="form-group col-6">
+							<label for="highschool">Highschool</label>
+							<input type="text" class="form-control" id="highschool" placeholder="Enter Highschool Name" asp-for="Highschool"> 
+						</div>
+						<div class="form-group col-6">
+							<label for="highschool_address">Address</label>
+							<input type="text" class="form-control" id="highschool_address" placeholder="Enter Highschool Address" asp-for="HighschoolAdd">
+						</div>
+						<div class="form-group col-6">
+							<label for="highschool_strand">Strand</label>
+							<select class="form-control" id="highschool_strand" asp-for="HighschoolStrand">
+								<option selected>Select Strand...</option>
+								<option>Science, technology, Engineering, and Mathematics (STEM)</option>
+								<option>Accountancy, Business, and Managements (ABM)</option>
+								<option>Humanities and Social Sciences</option>
+								<option>General Academic Strand (GAS)</option>
+								<option>2020</option>
+							</select>
+						</div>
+						<div class="form-group col-6">
+							<label for="highschool_year">Year Graduated</label>
+							<select class="form-control" id="highschool_year" asp-for="HighschoolGrad">
+								<option selected>Select Year...</option>
+								<option>2024</option>
+								<option>2023</option>
+								<option>2022</option>
+								<option>2021</option>
+								<option>2020</option>
+							</select>
+						</div>
+					</div>
+					@*========== END - Education ==========*@
+					<hr class="my-3" />
+					@*========== START - Work Experiences ==========*@
+					<div><h5>Work Experiences</h5></div>
+					<div class="row">
+						<div class="form-group col-8">
+							<label for="job_title">Job Title</label>
+							<input type="text" class="form-control" id="job_title" placeholder="Enter Job Title">
+						</div>
+						<div class="form-group col-2">
+							<label for="job_started_year">Year Started</label>
+							<select class="form-control" id="job_started_year">
+								<option selected>Select Year...</option>
+								<option>2024</option>
+								<option>2023</option>
+								<option>2022</option>
+								<option>2021</option>
+								<option>2020</option>
+							</select>
+						</div>
+						<div class="form-group col-2">
+							<label for="job_ended_year">Year Ended</label>
+							<select class="form-control" id="job_ended_year">
+								<option selected>Select Year...</option>
+								<option>2024</option>
+								<option>2023</option>
+								<option>2022</option>
+								<option>2021</option>
+								<option>2020</option>
+							</select>
+						</div>
+						<div class="form-group col">
+							<label for="job_role">Job Role</label>
+							<input type="text" class="form-control" id="job_role" placeholder="Enter Job Role">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-outline-primary float-end mt-3">Submit</button>
+				</form>
+			</div>
+		</div>	
+	</div>
+</div>

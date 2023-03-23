@@ -1,0 +1,61 @@
+﻿@model Resume.Models.HomeModel
+
+@{
+    ViewData["Title"] = "Sample Page";
+}
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="fw-bolder fs-5 text-center my-4" style="letter-spacing:3px">GENERATED RESUME</div>
+		<div class="card">
+			<div class="card-body">
+				
+				<h1 class="text-center text-uppercase" style="letter-spacing: 3px">@Model.FirstName @Model.Surname</h1>
+				<hr />
+
+				<div class="row">
+					<div class="row col-12 justify-content-center"> 
+						<div class="col-12"><h5 class="text-uppercase" style="letter-spacing:4px">Objectives</h5></div>
+						<div class="col-11 align-self-center"><p style="text-align: justify">@Model.Objectives</p></div>
+					</div>
+					<hr />
+					<div class="col-6">
+						<h5 class="text-uppercase" style="letter-spacing: 4px">Personal Details</h5>
+						<ul class="">
+							<li><span class="fw-bold">Name: </span>@Model.FirstName @Model.MiddleName @Model.Surname</li>
+							<li><span class="fw-bold">Place of Birth: </span>@Model.PlaceBirth</li>
+							<li><span class="fw-bold">Date of Birth: </span>@Model.DateBirth</li>
+							<li><span class="fw-bold">Gender: </span>@Model.Gender</li>
+							<li><span class="fw-bold">Address: </span>@Model.Address</li>
+							<li><span class="fw-bold">Contact Number: </span>@Model.ContactNumber</li>
+							<li><span class="fw-bold">Email: </span>@Model.Email</li>
+							<li><span class="fw-bold">LinkedIn URL: </span><a href="@Model.LinkedIn" class="link-dark text-decoration-none" target="_blank">@Model.LinkedIn</a></li>
+							<li><span class="fw-bold">Website: </span><a href="@Model.Website" class="link-dark text-decoration-none" target="_blank">@Model.Website</a></li>
+						</ul>
+					</div>
+					<div class="col-6">
+						<h5 class="text-uppercase" style="letter-spacing: 4px">Education</h5>
+						<ul>
+							<li>
+								<span class="fw-bold">College</span>
+								<ul class="list-unstyled">
+									<li>@Model.College <span class="float-end text-black-50">@Model.CollegeGrad</span></li>
+									<li class="fst-italic text-black-50">@Model.CollegeCourse</li>
+									<li class="text-black-50">@Model.CollegeAdd</li>
+								</ul>
+							</li>
+							<li>
+								<span class="fw-bold">Highschool</span>
+								<ul class="list-unstyled">
+									<li>@Model.Highschool <span class="float-end text-black-50">@Model.HighschoolGrad</span></li>
+									<li class="fst-italic text-black-50">@Model.HighschoolStrand</li>
+									<li class="text-black-50">@Model.HighschoolAdd</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
